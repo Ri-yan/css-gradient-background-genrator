@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Backgroung Generator</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <!-- For better scalability in mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backgroung Generator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body id="gradient">
-	<h1>BACKGROUND GENERATOR</h1>
-	<input class="color1" type="color" name="color1" value="#00ff00">
-	<input class="color2" type="color" name="color1" value="#ff0000">
-	<h2>CURRENT CSS BACKGROUND</h2>
-	<h3></h3>
-	<script type="text/javascript" src="script.js"></script>
+
+<body id="gradient" class="flex">
+    <div class="p">
+        <h1>Gradient Generator</h1>
+        <div class="flex">
+            <input class="inp color1" type="color" name="color1" value="#006eff">
+            <input class="inp color2" type="color" name="color1" value="#000080">
+        </div>
+        <div class="sliderHolder flex">
+            <label for="angls">Set Angle for Gradient</label>
+            <input type="range" min="0" max="360" value="90" class="slider" id="range">
+            <p>Value: <span id="rangeValue"></span></p>
+        </div>
+    </div>
+    <div class="p">
+        <h2>Your Generated CSS Gradient</h2>
+        <div id="code"></div>
+        <script type="text/javascript" src="script.js"></script>
+    </div>
 </body>
+
 </html>
